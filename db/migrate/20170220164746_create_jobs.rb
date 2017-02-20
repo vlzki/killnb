@@ -8,7 +8,7 @@ class CreateJobs < ActiveRecord::Migration[5.0]
       t.text :review
       t.date :deadline
       t.references :user, foreign_key: true
-      t.references :asset, foreign_key: true
+      t.references :asset, foreign_key: true, foreign_key: {to_table: :users}
 
       t.timestamps
     end
