@@ -30,6 +30,12 @@ ActiveRecord::Schema.define(version: 20170220152807) do
     t.datetime "updated_at",                          null: false
     t.index ["email"], name: "index_users_on_email", unique: true, using: :btree
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true, using: :btree
+    t.string "username"
+    t.string "password"
+    t.string "email"
+    t.string "city"
+    t.string "profil"
+    t.string "weapon"
   end
 
 end
