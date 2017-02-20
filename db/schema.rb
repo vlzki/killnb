@@ -34,7 +34,7 @@ ActiveRecord::Schema.define(version: 20170220152807) do
     t.string "password"
     t.string "email"
     t.string "city"
-    t.string "profil"
+    t.string "asset_profil"
     t.string "weapon"
   end
 

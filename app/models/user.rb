@@ -9,7 +9,6 @@ class User < ApplicationRecord
   validates :password, uniqueness: true, presence: true
   validates :email, uniqueness: true, presence: true
   validates :city
-  validates :profil
-  validates :weapon
-
+  validates :asset_profil
+  validates :weapon, uniqueness: true, presence: true
 end
