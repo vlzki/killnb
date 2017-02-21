@@ -1,0 +1,8 @@
+<%= simple_form_for @job, url: asset_jobs_path(@user), method: :post do |f| %>
+  <%= f.error_notification %>
+  <%= f.input :target_name %>
+  <%= f.input :description %>
+  <%= f.input :address %>
+  <%= f.input :deadline, as: :string, input_html: { class: "datepicker" }%>
+  <%= f.button :submit %>
+<% end %>

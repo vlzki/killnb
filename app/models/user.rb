@@ -4,8 +4,10 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
 
+  scope :assets, -> { where(asset_status: true) }
+
   has_many :jobs
-  # validates :username, uniqueness: true, presence: true
+  validates :username, presence: true
 
   validate :has_weapon_if_is_asset
 
