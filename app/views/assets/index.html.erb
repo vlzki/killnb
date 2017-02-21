@@ -1,4 +1,10 @@
 <h1>Assets#index</h1>
 <p>Find me in app/views/assets/index.html.erb</p>
 
-<%= link_to 'Show', asset_path %>
+<% @assets.each do |asset| %>
+  <%= link_to asset.email, asset_path(asset) %>
+<% end %>
+
+<p>
+<%= link_to 'Home', root_path %>
+</p>

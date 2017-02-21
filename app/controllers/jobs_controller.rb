@@ -1,6 +1,6 @@
 class JobsController < ApplicationController
-	before_action :set_user, only [:create, :destroy]
-	before_action :set_job, only [:show, :destroy]
+	before_action :set_user, only: [:new, :create, :destroy]
+	before_action :set_job, only: [:show, :destroy]
 
 	def index
 		@jobs = Job.all
@@ -16,7 +16,7 @@ class JobsController < ApplicationController
 	def create
 		@job = Job.new(job_params)
 		@job.user = @user
-		if @job.save
+    if @job.save
 			redirect_to jobs_path
 		else
 			render :new
@@ -35,7 +35,7 @@ class JobsController < ApplicationController
 	end
 
 	def set_user
-    	@user= User.find(params[:user_id])
+    	@user= User.find(params[:asset_id])
   	end
 
 	def job_params
@@ -43,6 +43,4 @@ class JobsController < ApplicationController
 	end
 end
 
-
-end
 
