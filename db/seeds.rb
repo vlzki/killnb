@@ -11,7 +11,7 @@ assets = [
     password: "kill001",
     email: "pingpong@yopmail.com",
     city: "Shangaï",
-    weapon: "Balles de pingpong ",
+    weapon: "Balles de pingpong",
   },
   {
     username: "Banana Slip",
@@ -33,5 +33,5 @@ assets = [
     email: "cranedoeuf@yopmail.com",
     city: "Cailloux sur Fontaines",
     weapon: "Peigne",
-  },
+  }
 ]
