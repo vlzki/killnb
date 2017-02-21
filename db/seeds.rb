@@ -11,7 +11,7 @@ assets = [
     password: "kill001",
     email: "pingpong@yopmail.com",
     city: "Shangaï",
-    weapon: "Pingpong balles",
+    weapon: "Balles de pingpong ",
   },
   {
     username: "Banana Slip",
