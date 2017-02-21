@@ -1,12 +1,12 @@
 class JobsController < ApplicationController
-	before_action :job_params, :set_user
+	before_action :set_user, only [:create, :destroy]
+	before_action :set_job, only [:show, :destroy]
 
 	def index
 		@jobs = Job.all
 	end
 
 	def show
-		@job = Job.find(params[:id])
 	end
 
 	def new
@@ -24,12 +24,15 @@ class JobsController < ApplicationController
 	end
 
 	def destroy
-		@job = Job.find(params[:id])
 		@job.destroy
-		redirect_to jobs_path(@job)
+		redirect_to jobs_path(@user)
 	end
 
 	private
+
+	def set_job
+		@job = Job.find(params[:id])
+	end
 
 	def set_user
     	@user= User.find(params[:user_id])
