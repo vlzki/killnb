@@ -63,13 +63,6 @@ assets = [
     weapons: "Croutes de fromage",
   },
   {
-    username: "René le crado",
-    password: "kill009",
-    email: "renelecrado@yopmail.com",
-    city: "Moncuq",
-    weapons: "Slips sales",
-  },
-  {
     username: "Jeanne 3 pattes",
     password: "kill010",
     email: "jeanne@yopmail.com",
@@ -87,7 +80,6 @@ urls = [
   "http://res.cloudinary.com/j0h4nf/image/upload/v1487778031/kh4ikey3ha7ay2jmmaif.png",
   "http://res.cloudinary.com/j0h4nf/image/upload/v1487777687/hgnh5cauic9mi1ksbbjs.png",
   "http://res.cloudinary.com/j0h4nf/image/upload/v1487777655/alv4cgcpcjqogdawhli0.png",
-  "http://res.cloudinary.com/j0h4nf/image/upload/v1487765210/jwprvallcwho7j7gy8lz.jpg",
   "http://res.cloudinary.com/j0h4nf/image/upload/v1487777655/alv4cgcpcjqogdawhli0.png"
 ]
 
