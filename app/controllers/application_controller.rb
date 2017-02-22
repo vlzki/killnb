@@ -6,13 +6,10 @@ class ApplicationController < ActionController::Base
   protected
 
   def configure_permitted_parameters
-    devise_parameter_sanitizer.permit(:sign_up, keys: [:username, :asset_status, :weapons])
-    devise_parameter_sanitizer.permit(:account_update, keys: [:username, :asset_status, :weapons])
+    devise_parameter_sanitizer.permit(:sign_up, keys: [:username, :asset_status, :weapons, :picture])
+    devise_parameter_sanitizer.permit(:account_update, keys: [:username, :asset_status, :weapons, :picture])
   end
 
-  def user_params
-  	params.require(:user).permit(:name, :photo)
-  end
 
   def selection_params
     params.require(:selection).permit(:city, :weapon)

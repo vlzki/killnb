@@ -4,16 +4,17 @@
 <div class="container">
   <div class="row">
     <% @assets.each do |asset| %>
-    <div class="col-xs-12 col-sm-4">
-      <div class="card text-center">
-
-        <% if asset.picture %>
-        <div class="card-header" style="background-image: url('<%= cl_image_path("8-2-hitman-png-picture_flgwgi.png", :gravity=>"face:center", :height=>235, :quality=>10, :radius=>0, :crop=>"fill")%>')">
+    <div class="col-sm-4">
+      <div class="avatar">
+        <div class="card text-center">
+          <% if asset.picture %>
+          <div class="card-header" style="background-image: url('<%= cl_image_path asset.picture.path %>')">
+          </div>
+          <% else %>
+          <div class="card-header" style="background-image: url('<%= cl_image_path("8-2-hitman-png-picture_flgwgi.png", :gravity=>"face:center", :height=>235, :quality=>10, :radius=>0, :crop=>"fill")%>')">
+          </div>
         </div>
-        <% else %>
-        <div class="card-header" style="background-image: url('<%= cl_image_path("8-2-hitman-png-picture_flgwgi.png", :gravity=>"face:center", :height=>235, :quality=>10, :radius=>0, :crop=>"fill")%>')">
-        </div>
-        <% end %>
+        <% end %>   
         <div class="card-body">
           <%= link_to asset.email, asset_path(asset) %>
         </div>

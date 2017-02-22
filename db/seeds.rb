@@ -11,69 +11,88 @@ assets = [
     password: "kill001",
     email: "pingpong@yopmail.com",
     city: "Shangaï",
-    weapon: "Balles de pingpong",
+    weapons: "Balles de pingpong",
   },
   {
     username: "Banana Slip",
     password: "kill002",
     email: "bananaslip@yopmail.com",
     city: "Basse Terre",
-    weapon: "Peaux de banane",
+    weapons: "Peaux de banane",
   },
   {
     username: "Atomic Slim",
     password: "kill003",
     email: "atomicslim@yopmail.com",
     city: "Titty Hill",
-    weapon: "Implants mamaires",
+    weapons: "Implants mamaires",
   },
   {
     username: "Crane d'oeuf",
     password: "kill004",
     email: "cranedoeuf@yopmail.com",
     city: "Cailloux sur Fontaines",
-    weapon: "Peigne",
+    weapons: "Peigne",
   },
   {
     username: "Globulus",
     password: "kill005",
     email: "globulus@yopmail.com",
     city: "Emjfjallajökull",
-    weapon: "Bulles de savon",
+    weapons: "Bulles de savon",
   },
   {
     username: "Jo la frite",
     password: "kill006",
     email: "jolafrite@yopmail.com",
     city: "Bruxelles",
-    weapon: "frites",
+    weapons: "frites",
   },
   {
     username: "Blanche neige",
     password: "kill007",
     email: "blancheneige@yopmail.com",
     city: "Hallstadt",
-    weapon: "Queue de pomme",
+    weapons: "Queue de pomme",
   },
   {
     username: "Mister Munster",
     password: "kill008",
     email: "mmunster@yopmail.com",
     city: "Munster",
-    weapon: "Croutes de fromage",
+    weapons: "Croutes de fromage",
   },
   {
     username: "René le crado",
     password: "kill009",
     email: "renelecrado@yopmail.com",
     city: "Moncuq",
-    weapon: "Slips sales",
+    weapons: "Slips sales",
   },
   {
     username: "Jeanne 3 pattes",
     password: "kill010",
     email: "jeanne@yopmail.com",
     city: "Lourdes",
-    weapon: "Déambulateur",
+    weapons: "Déambulateur",
   }
 ]
+
+urls = [
+  "http://res.cloudinary.com/j0h4nf/image/upload/v1487778946/pingpong-avatar_hnfut4.png",
+  "http://res.cloudinary.com/j0h4nf/image/upload/v1487778953/atomicslim-avatar_iz09pj.png",
+  "http://res.cloudinary.com/j0h4nf/image/upload/v1487778952/snowwhite-avatar_rfhinx.png",
+  "http://res.cloudinary.com/j0h4nf/image/upload/v1487778948/jeanne-avatar_zxr8mi.png",
+  "http://res.cloudinary.com/j0h4nf/image/upload/v1487778946/pingpong-avatar_hnfut4.png",
+  "http://res.cloudinary.com/j0h4nf/image/upload/v1487778031/kh4ikey3ha7ay2jmmaif.png",
+  "http://res.cloudinary.com/j0h4nf/image/upload/v1487777687/hgnh5cauic9mi1ksbbjs.png",
+  "http://res.cloudinary.com/j0h4nf/image/upload/v1487777655/alv4cgcpcjqogdawhli0.png",
+  "http://res.cloudinary.com/j0h4nf/image/upload/v1487765210/jwprvallcwho7j7gy8lz.jpg",
+  "http://res.cloudinary.com/j0h4nf/image/upload/v1487777655/alv4cgcpcjqogdawhli0.png"
+]
+
+assets.each_with_index do |asset, ind|
+  user = User.new(asset)
+  user.save!
+  user.picture_url = urls[ind] 
+end

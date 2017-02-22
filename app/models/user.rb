@@ -11,7 +11,7 @@ class User < ApplicationRecord
 
   validate :has_weapon_if_is_asset
 
-  has_attachment :photo
+  has_attachment :picture
 
   def has_weapon_if_is_asset
     if asset_status and weapons.blank?

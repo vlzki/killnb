@@ -1,37 +1,44 @@
-<h1>Assets#show</h1>
-<p>Find me in app/views/assets/show.html.erb</p>
 
-<%= link_to 'Back', assets_path %>
+<div class="container">
+  <div class="row">
+    <div class="col-sm-12">
+      <h1>Assets#show</h1>
+      <p>Find me in app/views/assets/show.html.erb</p>
 
-<div class="media">
-  <div class="media-body">
-    <div class="media-section">
-      <h2>asset.picture</h2>
-      ...
+      <%= link_to 'Back', assets_path %>
+
+      <div class="media">
+        <div class="media-body">
+          <div class="media-section">
+            <h2>asset.picture</h2>
+            ...
+          </div>
+          <div class="media-section">
+            <h2>Profile</h2>
+            <ul>
+             <li>Description</li>
+             <li>XP</li>
+             <li>Number of Kills</li>
+             <li>Etc</li>
+           </ul>
+         </div>
+       </div>
+       <div class="media-aside">
+        <div class="media-section">
+          <%= render "jobs/form" %>
+          ...
+        </div>
+        <div class="media-section">
+          <h2>To be determined</h2>
+          ...
+        </div>
+      </div>
     </div>
-    <div class="media-section">
-      <h2>Profile</h2>
-      <ul>
-      	<li>Description</li>
-      	<li>XP</li>
-      	<li>Number of Kills</li>
-      	<li>Etc</li>
-      </ul>
-    </div>
-  </div>
-  <div class="media-aside">
-    <div class="media-section">
-      <%= render "jobs/form" %>
-      ...
-    </div>
-    <div class="media-section">
-      <h2>To be determined</h2>
-      ...
-    </div>
+
   </div>
 </div>
+</div>
+
 
 <div <map> Insert Map</map>
-
-<div <footer> Insert Footer</footer>
 
