@@ -3,8 +3,6 @@
 
 <%= link_to 'Back', assets_path %>
 
-<%= link_to 'New job', new_asset_job_path(@asset) %>
-
 <div class="media">
   <div class="media-body">
     <div class="media-section">
@@ -23,7 +21,7 @@
   </div>
   <div class="media-aside">
     <div class="media-section">
-      <h2>Booking Form</h2>
+      <%= render "jobs/form" %>
       ...
     </div>
     <div class="media-section">
@@ -36,3 +34,4 @@
 <div <map> Insert Map</map>
 
 <div <footer> Insert Footer</footer>
+
