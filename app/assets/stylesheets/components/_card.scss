@@ -2,9 +2,6 @@
  * Your CSS code for flash notices and alerts
 * ------------------------------------- */
 
-.card {
-  padding: 50px;
-}
 .card-header {
 	
   height: 170px;
@@ -12,5 +9,7 @@
   background-size: cover;
 }
 .card-body {
-  padding: 30px;
+  padding-bottom: 10px;
+  width: 250px;
+  text-align: left;
 }
