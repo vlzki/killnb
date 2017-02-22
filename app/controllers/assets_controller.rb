@@ -5,5 +5,6 @@ class AssetsController < ApplicationController
 
   def show
     @asset = User.assets.find(params[:id])
+    @job = Job.new
   end
 end
