@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170221142354) do
+ActiveRecord::Schema.define(version: 20170221222719) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -26,6 +26,7 @@ ActiveRecord::Schema.define(version: 20170221142354) do
     t.integer  "asset_id"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
+    t.datetime "done_at"
     t.index ["asset_id"], name: "index_jobs_on_asset_id", using: :btree
     t.index ["user_id"], name: "index_jobs_on_user_id", using: :btree
   end
@@ -47,6 +48,7 @@ ActiveRecord::Schema.define(version: 20170221142354) do
     t.string   "city"
     t.string   "weapons"
     t.boolean  "asset_status",           default: true
+    t.string   "picture"
     t.index ["email"], name: "index_users_on_email", unique: true, using: :btree
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true, using: :btree
   end

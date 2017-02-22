@@ -33,5 +33,47 @@ assets = [
     email: "cranedoeuf@yopmail.com",
     city: "Cailloux sur Fontaines",
     weapon: "Peigne",
+  },
+  {
+    username: "Globulus",
+    password: "kill005",
+    email: "globulus@yopmail.com",
+    city: "Emjfjallajökull",
+    weapon: "Bulles de savon",
+  },
+  {
+    username: "Jo la frite",
+    password: "kill006",
+    email: "jolafrite@yopmail.com",
+    city: "Bruxelles",
+    weapon: "frites",
+  },
+  {
+    username: "Blanche neige",
+    password: "kill007",
+    email: "blancheneige@yopmail.com",
+    city: "Hallstadt",
+    weapon: "Queue de pomme",
+  },
+  {
+    username: "Mister Munster",
+    password: "kill008",
+    email: "mmunster@yopmail.com",
+    city: "Munster",
+    weapon: "Croutes de fromage",
+  },
+  {
+    username: "René le crado",
+    password: "kill009",
+    email: "renelecrado@yopmail.com",
+    city: "Moncuq",
+    weapon: "Slips sales",
+  },
+  {
+    username: "Jeanne 3 pattes",
+    password: "kill010",
+    email: "jeanne@yopmail.com",
+    city: "Lourdes",
+    weapon: "Déambulateur",
   }
 ]
