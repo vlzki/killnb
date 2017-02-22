@@ -14,4 +14,8 @@ class ApplicationController < ActionController::Base
   	params.require(:user).permit(:name, :photo)
   end
 
+  def selection_params
+    params.require(:selection).permit(:city, :weapon)
+  end
+
 end
