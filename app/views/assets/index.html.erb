@@ -8,13 +8,13 @@
       <div class="avatar">
         <div class="card text-center">
           <% if asset.picture %>
-          <div class="card-header" style="background-image: url('<%= cl_image_path asset.picture.path %>')">
-          </div>
+            <div class="card-header" style="background-image: url('<%= cl_image_path asset.picture.path %>')">
+            </div>
           <% else %>
-          <div class="card-header" style="background-image: url('<%= cl_image_path("8-2-hitman-png-picture_flgwgi.png", :gravity=>"face:center", :height=>235, :quality=>10, :radius=>0, :crop=>"fill")%>')">
-          </div>
+            <div class="card-header" style="background-image: url('<%= cl_image_path("8-2-hitman-png-picture_flgwgi.png", :gravity=>"face:center", :height=>235, :quality=>10, :radius=>0, :crop=>"fill")%>')">
+            </div>
+          <% end %>   
         </div>
-        <% end %>   
         <div class="card-body">
           <%= link_to asset.email, asset_path(asset) %>
         </div>
