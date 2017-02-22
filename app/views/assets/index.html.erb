@@ -1,10 +1,24 @@
-<h1>Assets#index</h1>
-<p>Find me in app/views/assets/index.html.erb</p>
 
-<% @assets.each do |asset| %>
-  <%= link_to asset.email, asset_path(asset) %>
-<% end %>
+<h1 class="text-center">Asset list:</h1>
 
-<p>
-<%= link_to 'Home', root_path %>
-</p>
+<div class="container">
+  <div class="row">
+    <% @assets.each do |asset| %>
+    <div class="col-xs-12 col-sm-4">
+      <div class="card text-center">
+
+        <% if asset.picture %>
+        <div class="card-header" style="background-image: url('<%= cl_image_path("8-2-hitman-png-picture_flgwgi.png", :gravity=>"face:center", :height=>235, :quality=>10, :radius=>0, :crop=>"fill")%>')">
+        </div>
+        <% else %>
+        <div class="card-header" style="background-image: url('<%= cl_image_path("8-2-hitman-png-picture_flgwgi.png", :gravity=>"face:center", :height=>235, :quality=>10, :radius=>0, :crop=>"fill")%>')">
+        </div>
+        <% end %>
+        <div class="card-body">
+          <%= link_to asset.email, asset_path(asset) %>
+        </div>
+      </div>
+    </div>
+    <% end %>
+  </div>
+</div>
