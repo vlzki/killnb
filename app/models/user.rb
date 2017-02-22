@@ -17,6 +17,14 @@ class User < ApplicationRecord
     end
   end
 
+  def asset?
+    asset_status
+  end
+
+  def customer?
+    not asset_status
+  end
+
 
   def self.weapons
     ['Balles de pingpong', 'banane', 'cure-dent', 'implants mammaires']
