@@ -13,3 +13,8 @@
 @import "components/index";
 @import "pages/index";
 @import "vendor/index";
+
+//remove <li> sur attachinary
+.attachinary_container ul li {
+list-style: none
+}
