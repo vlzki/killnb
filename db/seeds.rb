@@ -12,7 +12,7 @@ assets = [
     email: "pingpong@yopmail.com",
     city: "Shangaï",
     weapons: "Balles de pingpong",
-    profile_description: "Ping Pong is one of the best killer of Shangaï. He is also knoww as chopsticks.",
+    profile_description: "Ping Pong is one of the best killer of Shangaï. He is also known as chopsticks.",
     number_of_kills: "10",
     xp_level: "Experienced",
 
