@@ -6,34 +6,6 @@
       <p>Find me in app/views/assets/show.html.erb</p>
 
 
-<% @job = Job.find(params[:id]) %>
-
-<div class="media">
-  <div class="media-body">
-    <div class="media-section">
-      <h2>asset.picture</h2>
-      ...
-    </div>
-    <div class="media-section">
-      <h2>Profile</h2>
-      <ul>
-      	<li>Description</li>
-      	<li>XP</li>
-      	<li>Number of Kills</li>
-      	<li>Etc</li>
-      </ul>
-    </div>
-  </div>
-  <div class="media-aside">
-    <div class="media-section">
-      <%= render "jobs/form" %>
-      ...
-    </div>
-    <div class="media-section">
-      <h2>To be determined</h2>
-      ...
-
-      <%= link_to 'Back', assets_path %>
 
       <div class="media">
         <div class="media-body">
@@ -59,24 +31,25 @@
         <div class="media-section">
           <h2>To be determined</h2>
           ...
+
+          <%= link_to 'Back', assets_path %>
+
+
+
         </div>
+
       </div>
-
     </div>
-
   </div>
-</div>
-</div>
 
 
 
-<div class="wrapper">
-  <h4 class="text-left">Asset Job Review</h4>
-    <p> <%= @job.review %> </p>
-</div>
+  <div class="wrapper">
+    <h4 class="text-left">Asset Job Review</h4>
+    <% @asset_jobs.each do |job| %>
+    <%= job.review %>
+    <% end %>
+  </div>
 
-<div <map> Insert Map</map>
-
-
-<div <map> Insert Map</map>
+  <div <map> Insert Map</map>
 
