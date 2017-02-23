@@ -8,7 +8,6 @@ class AssetsController < ApplicationController
     @assets = User.all.where("city LIKE ?","%#{params[:selection][:city].capitalize}%")
 
     # @assets = User.all.near(params[:selection][:city], limit)
-
   end
 
   def show
