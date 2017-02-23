@@ -5,6 +5,8 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+
 assets = [
   {
     username: "Ping Pong",
@@ -159,6 +161,7 @@ assets = [
   }
 ]
 
+
 urls = [
   "http://res.cloudinary.com/j0h4nf/image/upload/v1487778946/pingpong-avatar_hnfut4.png",
   "http://res.cloudinary.com/j0h4nf/image/upload/v1487778953/atomicslim-avatar_iz09pj.png",
@@ -181,5 +184,5 @@ urls = [
 assets.each_with_index do |asset, ind|
   user = User.new(asset)
   user.save!
-  user.picture_url = urls[ind] 
+  user.picture_url = urls[ind]
 end

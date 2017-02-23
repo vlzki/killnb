@@ -3,6 +3,9 @@ class PagesController < ApplicationController
 
 
   def home
-    @user = User.new
+    @weapons = []
+    User.all.each do |killer|
+      @weapons << killer.weapons
+    end
   end
 end

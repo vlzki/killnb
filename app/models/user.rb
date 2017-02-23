@@ -27,8 +27,4 @@ class User < ApplicationRecord
     not asset_status
   end
 
-
-  def self.weapons
-    User.weapons
-  end
 end

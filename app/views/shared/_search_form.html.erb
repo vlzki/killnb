@@ -1,6 +1,6 @@
 <%= simple_form_for :selection, url: assets_path, method: :get do |f| %>
   <%= f.input :city, label: false, prompt: 'city?' %>
-  <%= f.input :weapons, collection: User.weapons, label: false, prompt: 'weapon ?' %>
+  <%= f.input :weapons, collection: @weapons, label: false, prompt: 'weapon ?' %>
   <%= f.button :submit %>
   <% end %>
 
