@@ -1,22 +1,28 @@
 
-<h1 class="text-center">Asset list:</h1>
+<h1 class="text-center">Please choose your hitman:</h1>
 
 <div class="container">
   <div class="row">
     <% @assets.each do |asset| %>
-    <div class="col-sm-4">
+    <div class="col-sm-3">
       <div class="avatar">
         <div class="card text-center">
-          <% if asset.picture %>
-            <div class="card-header" style="background-image: url('<%= cl_image_path asset.picture.path %>')">
+          <% asset.picture %>
+          <%= link_to asset_path(asset) do %>
+          <div class="card-header" style="background-image: url('<%= cl_image_path asset.picture.path %>')">
+          </div>
+          <% end %>
+
+          <div class="card-body">
+            <ul>
+            <li>Username: <%= asset.username %></li>
+              <li>City: <%= asset.city %></li>
+              <li>Weapons: <%= asset.weapons %></li>
+              <li>XP: <%= asset.xp_level %></li>
+              <li>Kills: <%= asset.number_of_kills %></li>
+              <li>Description: <%= asset.profile_description %></li>
             </div>
-          <% else %>
-            <div class="card-header" style="background-image: url('<%= cl_image_path("8-2-hitman-png-picture_flgwgi.png", :gravity=>"face:center", :height=>235, :quality=>10, :radius=>0, :crop=>"fill")%>')">
-            </div>
-          <% end %>   
-        </div>
-        <div class="card-body">
-          <%= link_to asset.email, asset_path(asset) %>
+          </ul> 
         </div>
       </div>
     </div>
