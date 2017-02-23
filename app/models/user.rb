@@ -29,6 +29,6 @@ class User < ApplicationRecord
 
 
   def self.weapons
-    ['Balles de pingpong', 'banane', 'cure-dent', 'implants mammaires']
+    User.weapons
   end
 end
