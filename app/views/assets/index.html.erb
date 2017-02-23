@@ -1,18 +1,30 @@
 <h1 class="text-center">Please choose your hitman:</h1>
 <div class="container">
-  <div class="row">
-    <div class="col-md-12">
-      <% @assets.each do |asset| %>
-      <div class="col-md-3 col-sm-6">
-        <div class="card-container">
-          <div class="card">
-            <div class="front">
-              <div class="cover">
-                <div class="card-header" style="background-image: linear-gradient(-225deg, rgba(0,101,168,0.6) 0%, rgba(0,36,61,0.6) 50%);">
-                </div>
-              </div>
-              <div class="user">
-                <%= link_to asset_path(asset) do %>
+    <div class="row">
+     <div class="col-md-12">
+            <% @assets.each do |asset| %>
+        <div class="col-md-3 col-sm-6">
+              <div class="card-container">
+                <div class="card">
+                    <div class="front">
+                        <div class="cover">
+                          <div class="card-header" style="background-image: linear-gradient(-225deg, rgba(0,101,168,0.6) 0%, rgba(0,36,61,0.6) 50%);">
+                          </div>
+                        </div>
+                        <div class="user">
+                            <%= link_to asset_path(asset) do %>
+                              <%= cl_image_tag asset.picture.path, class: 'img-circle' %>
+                            <% end %>
+                        </div>
+                        <div class="content">
+                            <div class="main">
+                                <h3 class="name"><%= asset.username %></h3>
+                                <p class="profession">Hitman</p>
+                                <p class="text-center"><%= asset.profile_description %></p>
+                            </div>
+                        </div>
+                    </div> <!-- end front panel -->
+                <%= link_to assets_path(asset) do %>
                     <div class="back">
                         <div class="header">
                             <h5 class="motto"><%= asset.weapons %></h5>
@@ -60,4 +72,3 @@
     </div> <!-- end row -->
   </div> <!-- end container -->
 <script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js"></script>
-
