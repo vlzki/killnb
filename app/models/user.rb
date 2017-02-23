@@ -11,6 +11,8 @@ class User < ApplicationRecord
 
   validate :has_weapon_if_is_asset
 
+  has_attachment :picture
+
   def has_weapon_if_is_asset
     if asset_status and weapons.blank?
       errors.add(:weapons, "You must have a weapon if you are an asset")
@@ -25,8 +27,4 @@ class User < ApplicationRecord
     not asset_status
   end
 
-
-  def self.weapons
-    ['Balles de pingpong', 'banane', 'cure-dent', 'implants mammaires']
-  end
 end

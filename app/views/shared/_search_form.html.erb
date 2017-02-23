@@ -1,4 +1,7 @@
-<%= simple_form_for @user do |f| %>
-<%= f.input :city %>
-<%= f.input :weapon, collection: @user.weapon %>
-<%= f.button :submit, class: 'btn btn-primary' %>
+<%= simple_form_for :selection, url: assets_path, method: :get do |f| %>
+  <%= f.input :city, label: false, prompt: 'city?' %>
+  <%= f.input :weapons, collection: @weapons, label: false, prompt: 'weapon ?' %>
+  <%= f.button :submit %>
+  <% end %>
+
+

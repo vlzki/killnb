@@ -1,5 +1,18 @@
-<h1>Pages#home</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
+<div class="banner" style="background-image: linear-gradient(-225deg, rgba(0,101,168,0.6) 0%, rgba(0,36,61,0.6) 50%), url(<%= image_path 'jocky.jpg'%>);">
+  <div class="banner-content">
+    <h1>Killn'B</h1>
+    <p>Very cool Team of killers, useful and smart</p>
+    <div class="form-inline">
+      <%= render 'shared/search_form' %>
+    </div>
+    <br>
 
+    <%= link_to assets_path do %>
+      <%= image_tag 'killme.png' %>
+    <% end %>
 
-<%= link_to 'Index', assets_path %>
+<%= content_for(:pre_js) do %>
+  <script src="https://maps.googleapis.com/maps/api/js?libraries=places&amp;key=<%= ENV['GOOGLE_KEY_API'] %>"></script>
+<% end %>
+  </div>
+</div>
