@@ -1,31 +1,74 @@
 
 <h1 class="text-center">Please choose your hitman:</h1>
-
 <div class="container">
-  <div class="row">
-    <% @assets.each do |asset| %>
-    <div class="col-sm-3">
-      <div class="avatar">
-        <div class="card text-center">
-          <% asset.picture %>
-          <%= link_to asset_path(asset) do %>
-          <div class="card-header" style="background-image: url('<%= cl_image_path asset.picture.path %>')">
-          </div>
-          <% end %>
+    <div class="row">
+     <div class="col-md-12">
+            <% @assets.each do |asset| %>
+        <div class="col-md-3 col-sm-6">
+              <div class="card-container">
+                <div class="card">
+                    <div class="front">
+                        <div class="cover">
+                          <div class="card-header" style="background-image: linear-gradient(-225deg, rgba(0,101,168,0.6) 0%, rgba(0,36,61,0.6) 50%);">
+                          </div>
+                        </div>
+                        <div class="user">
+                            <%= link_to asset_path(asset) do %>
+                              <%= cl_image_tag asset.picture.path, class: 'img-circle' %>
+                            <% end %>
+                        </div>
+                        <div class="content">
+                            <div class="main">
+                                <h3 class="name"><%= asset.username %></h3>
+                                <p class="profession">Hitman</p>
+                                <p class="text-center"><%= asset.profile_description %></p>
+                            </div>
+                        </div>
+                    </div> <!-- end front panel -->
+                    <div class="back">
+                        <div class="header">
+                            <h5 class="motto"><%= asset.weapons %></h5>
+                        </div>
+                        <div class="content">
+                            <div class="main">
+                                <h4 class="text-center"><%= asset.city %></h4>
+                                <p class="text-center">Web design, Adobe Photoshop, HTML5, CSS3, Corel and many others...</p>
 
-          <div class="card-body">
-            <ul>
-            <li>Username: <%= asset.username %></li>
-              <li>City: <%= asset.city %></li>
-              <li>Weapons: <%= asset.weapons %></li>
-              <li>XP: <%= asset.xp_level %></li>
-              <li>Kills: <%= asset.number_of_kills %></li>
-              <li>Description: <%= asset.profile_description %></li>
-            </div>
-          </ul> 
-        </div>
-      </div>
-    </div>
-    <% end %>
-  </div>
-</div>
+                                <div class="stats-container">
+                                    <div class="stats">
+                                        <h4>235</h4>
+                                        <p>
+                                            XP
+                                        </p>
+                                    </div>
+                                    <div class="stats">
+                                        <h4><%= asset.number_of_kills %></h4>
+                                        <p>
+                                            Number of Kills
+                                        </p>
+                                    </div>
+                                    <div class="stats">
+                                        <h4>35</h4>
+                                        <p>
+                                            Rating
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="footer">
+                            <div class="social-links text-center">
+                                <a href="http://deepak646.blogspot.in/" class="facebook"><i class="fa fa-facebook fa-fw"></i></a>
+                                <a href="http://deepak646.blogspot.in/" class="google"><i class="fa fa-google-plus fa-fw"></i></a>
+                                <a href="http://deepak646.blogspot.in/" class="twitter"><i class="fa fa-twitter fa-fw"></i></a>
+                            </div>
+                        </div>
+                    </div> <!-- end back panel -->
+                </div> <!-- end card -->
+              </div> <!-- end card-container -->
+        </div> <!-- end col md 4 -->
+            <% end %>
+      </div> <!-- end col sm 10 -->
+    </div> <!-- end row -->
+  </div> <!-- end container -->
+<script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js"></script>
