@@ -1,18 +1,13 @@
-
-<h3 class="text-center">Customer Job Review</h3>
+<h3 class="text-center">Asset Job Review</h3>
 
 <div class="container">
   <div class="row">
     <div class="col-xs-12 col-sm-6 col-sm-offset-3">
-      <%= simple_form_for @job, url:  customers_job_path(@job) do |f| %>
+
+      <%= simple_form_for @job, url:  assets_job_path(@job) do |f| %>
         <%= f.input :review, placeholder: "Please Enter your review" %>
         <%= f.submit "Update Review", class: "btn btn-success"%>
       <% end %>
     </div>
   </div>
 </div>
-
-
-
-<%= link_to 'Home', root_path %>
-
