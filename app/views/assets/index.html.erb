@@ -1,4 +1,3 @@
-
 <h1 class="text-center">Please choose your hitman:</h1>
 <div class="container">
     <div class="row">
@@ -34,26 +33,6 @@
                             <div class="main">
                                 <h4 class="text-center"><%= asset.city %></h4>
                                 <p class="text-center">Web design, Adobe Photoshop, HTML5, CSS3, Corel and many others...</p>
-
-
-        <% if asset.picture %>
-        <div class="card-header" style="background-image: url('<%= cl_image_path("8-2-hitman-png-picture_flgwgi.png", :gravity=>"face:center", :height=>235, :quality=>10, :radius=>0, :crop=>"fill")%>')">
-        </div>
-        <% else %>
-        <div class="card-header" style="background-image: url('<%= cl_image_path("8-2-hitman-png-picture_flgwgi.png", :gravity=>"face:center", :height=>235, :quality=>10, :radius=>0, :crop=>"fill")%>')">
-        </div>
-        <% end %>
-        <div class="card-body">
-          <%= link_to asset.email, asset_path(asset) %>
-        </div>
-      </div>
-    </div>
-    <% end %>
-  </div>
-</div>
-
-
-
                                 <div class="stats-container">
                                     <div class="stats">
                                         <h4>235</h4>
@@ -93,4 +72,3 @@
     </div> <!-- end row -->
   </div> <!-- end container -->
 <script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js"></script>
-
