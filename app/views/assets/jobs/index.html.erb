@@ -1,1 +1,20 @@
 <h1>hitman jobs</h1>
+
+<% byebug %>
+<% @job = Job.all %>
+<% @user = User.new %>
+
+<div class="wrapper" style="background-image: linear-gradient(-225deg, rgba(0,101,168,0.6) 0%, rgba(0,36,61,0.6) 30%);">
+  <h4 class="text-left">Asset Jobs Review</h4>
+    <ul>
+      <% @job.each do |job| %>
+      <%    @user = User.find(job.asset_id) %>
+        <li>
+          <%= @user.username %>
+          <%= "======" %>
+          <%= job.review %>
+        </li>
+      <% end %>
+    </ul>
+</div>
+

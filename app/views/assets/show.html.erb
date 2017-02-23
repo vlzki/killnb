@@ -3,6 +3,8 @@
 
 <%= link_to 'Back', assets_path %>
 
+<% @job = Job.find(params[:id]) %>
+
 <div class="media">
   <div class="media-body">
     <div class="media-section">
@@ -29,6 +31,12 @@
       ...
     </div>
   </div>
+</div>
+
+
+<div class="wrapper">
+  <h4 class="text-left">Asset Job Review</h4>
+    <p> <%= @job.review %> </p>
 </div>
 
 <div <map> Insert Map</map>

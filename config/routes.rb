@@ -4,11 +4,11 @@ Rails.application.routes.draw do
   root to: 'pages#home'
 
   namespace :assets do
-    resources :jobs, only: [:index, :show]
+    resources :jobs, only: [:index, :show, :update]
   end
 
   namespace :customers do
-    resources :jobs, only: [:index, :show]
+    resources :jobs, only: [:index, :show, :update]
   end
 
   resources :assets, only: [:index, :show] do
