@@ -25,6 +25,7 @@
                             </div>
                         </div>
                     </div> <!-- end front panel -->
+                <%= link_to asset_path(asset) do %>
                     <div class="back">
                         <div class="header">
                             <h5 class="motto"><%= asset.weapons %></h5>
@@ -84,9 +85,10 @@
                         </div>
                     </div> <!-- end back panel -->
                 </div> <!-- end card -->
+                <% end %>
               </div> <!-- end card-container -->
-        </div> <!-- end col md 4 -->
-            <% end %>
+            </div> <!-- end col md 4 -->
+        <% end %>
       </div> <!-- end col sm 10 -->
     </div> <!-- end row -->
   </div> <!-- end container -->
