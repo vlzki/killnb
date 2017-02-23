@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>TODO</title>
+    <title>Killn'B</title>
     <%= csrf_meta_tags %>
     <%= action_cable_meta_tag %>
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -14,7 +14,9 @@
     <%= yield %>
     <%= render 'shared/footer' unless controller_name == "pages" && action_name == "home" %>
 
+    <%= yield(:pre_js) %>
     <%= javascript_include_tag 'application' %>
+    <%= javascript_include_tag 'google_maps_autocomplete' %>
     <%= cloudinary_js_config %>
   </body>
 </html>
