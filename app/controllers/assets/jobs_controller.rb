@@ -10,6 +10,17 @@ class Assets::JobsController < ApplicationController
 #    @job   = Job.find(params[:id])
   end
 
+  def create
+    @job = Job.new(job_params)
+    @job.asset = @asset
+    @job.user = current_user
+    if @job.save
+      redirect_to customers_job_path(@job)
+    else
+      render "assets/show"
+    end
+  end
+
   def update
 
     @job.update(job_params)
@@ -23,7 +34,7 @@ class Assets::JobsController < ApplicationController
   end
 
   def job_params
-    params.require(:job).permit(:review)
+    params.require(:job).permit(:review, :target_name, :description, :address, :deadline)
   end
 
 end

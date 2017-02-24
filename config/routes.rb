@@ -5,7 +5,7 @@ Rails.application.routes.draw do
   root to: 'pages#home'
 
   namespace :assets do
-    resources :jobs, only: [:index, :show, :update]
+    resources :jobs, only: [:index, :create, :show, :update]
   end
 
   namespace :customers do
@@ -16,7 +16,7 @@ Rails.application.routes.draw do
     resources :jobs, only: [:create]
   end
 
-  resources :jobs, only: [:delete] do
+  resources :jobs, only: [:delete, :create] do
     member do
       get 'done'
     end
