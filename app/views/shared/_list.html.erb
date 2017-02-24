@@ -4,9 +4,9 @@
 <div class="product">
   <div class='product-upvote'>
     <div class="product-arrow"></div>
-    <div class='product-count'>95</div>
+    <div class='product-count'></div>
   </div>
-  <img src="kudoz.jpg" alt="kudoz" class="product-image hidden-xs">
+  <img alt="kudoz" class="product-image hidden-xs"<%= image_tag "icon-dead.png" %>
   <div class='product-body'>
 
     <h5>Your target is : <%= job.target_name %></h5>
@@ -16,8 +16,8 @@
 
   </div>
   <ul class="list-inline product-controls hidden-sm hidden-xs">
-    <li><a href=""><i class="fa fa-heart"></i></a></li>
-    <li><a href=""><i class="fa fa-share"></i></a></li>
+    <li><a href=""><i class="fa fa-check-circle-o"></i></a></li>
+    <li><a href=""><i class="fa fa-usd"></i></a></li>
     <li><a href=""><i class="fa fa-star"></i></a></li>
   </ul>
 </div>
