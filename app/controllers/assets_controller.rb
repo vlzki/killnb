@@ -2,17 +2,32 @@ class AssetsController < ApplicationController
   skip_before_action :authenticate_user!, only: [ :index, :show ]
 
   def index
-    @assets = User.assets
-    # if params[:selection][:weapons]
-   # @assets = User.all.where(weapons: params[:selection][:weapons])
-   # @assets = User.all.where("city LIKE ?","%#{params[:selection][:city].capitalize}%")
+    @assets = User.assets.where.not(latitude: nil, longitude: nil)
+    if params[:selection][:weapons].present?
+      @assets = User.all.where(weapons: params[:selection][:weapons])
+    # elsif params[:selection][:city].present?
+    #   @assets = User.all.where("city LIKE ?","%#{params[:selection][:city].capitalize}%")
+    else
+      @assets = User.assets.all
+    end
 
-    # @assets = User.all.near(params[:selection][:city], limit)
+    # @asset_coord = User.assets.near(params[:selection][:city], 5000)
+    @hash = Gmaps4rails.build_markers(@asset_coord) do |asset, marker|
+      marker.lat asset.latitude
+      marker.lng asset.longitude
+      # marker.infowindow render_to_string(partial: "/assets/map_box", locals: { asset: asset })
+    end
   end
 
   def show
     @asset = User.assets.find(params[:id])
+    @asset_coordinates = { lat: @asset.latitude, lng: @asset.longitude }
+    @hash = Gmaps4rails.build_markers(@assets) do |asset, marker|
+      marker.lat asset.latitude
+      marker.lng asset.longitude
+      marker.infowindow render_to_string(partial: "/assets/map_box", locals: { asset: asset })
+    end
     @job = Job.new
-    @asset_jobs = @asset.jobs 
+    @asset_jobs = @asset.jobs
   end
 end
