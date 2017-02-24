@@ -3,16 +3,18 @@ class AssetsController < ApplicationController
 
   def index
     @assets = User.assets.where.not(latitude: nil, longitude: nil)
-    if params[:selection][:weapons].present?
+    if params[:selection][:weapons].present? &&
       @assets = User.all.where(weapons: params[:selection][:weapons])
-    # elsif params[:selection][:city].present?
-    #   @assets = User.all.where("city LIKE ?","%#{params[:selection][:city].capitalize}%")
+    elsif params[:selection][:city].present?
+      @assets = User.all.where("city LIKE ?","%#{params[:selection][:city].capitalize}%")
     else
       @assets = User.assets.all
     end
-
-    # @asset_coord = User.assets.near(params[:selection][:city], 5000)
-    @hash = Gmaps4rails.build_markers(@asset_coord) do |asset, marker|
+    # @asset_coord = []
+    # User.assets.each do |killer|
+    #   @asset_coord << killer.near([killer.latitude][killer.longitude], 10)
+    # end
+    @hash = Gmaps4rails.build_markers(@assets) do |asset, marker|
       marker.lat asset.latitude
       marker.lng asset.longitude
       # marker.infowindow render_to_string(partial: "/assets/map_box", locals: { asset: asset })
