@@ -3,10 +3,11 @@
 -----------------------------------------------*/
 
 #global-header {
-  background: url("killnb.png") no-repeat;
+  background: url("hitmanbg.jpg")center no-repeat;
   background-size: cover;
   padding-top: 150px;
   padding-bottom: 107px;
+  padding-right: 50px;
   position: relative;
   background-attachment: fixed;
 }
@@ -44,10 +45,11 @@
 }
 
 #slider-contact {
-  background: url("killnb.png") no-repeat;
+  background: url("hitmanbg.jpg") no-repeat;
   background-size: cover;
   padding-top: 150px;
   padding-bottom: 107px;
+  padding-right: 50px;
   position: relative;
 }
 #slider-contact:before {
@@ -209,10 +211,11 @@
 -----------------------------------------------*/
 
 #call-to-action {
-  background: url("killnb.png") no-repeat;
+  background: url("hitmanbg.jpg") center no-repeat;
   background-size: cover;
   background-attachment: fixed;
   padding: 70px 0px;
+  padding-right: 50px;
   position: relative;
   text-align: center;
   color: #fff;
