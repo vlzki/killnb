@@ -3,12 +3,16 @@ class AssetsController < ApplicationController
 
   def index
     @assets = User.assets.where.not(latitude: nil, longitude: nil)
-    if params[:selection][:weapons].present? &&
-      @assets = User.all.where(weapons: params[:selection][:weapons])
+
+    # if params[:selection][:weapons].present? && params[:selection][:city].present?
+    #   @assets = User.assets.where(weapons: params[:selection][:weapons] AND "city LIKE ?","%#{params[:selection][:city].capitalize}%")
+    if params[:selection][:weapons].present?
+      @assets = User.assets.where(weapons: params[:selection][:weapons])
     elsif params[:selection][:city].present?
-      @assets = User.all.where("city LIKE ?","%#{params[:selection][:city].capitalize}%")
+      raise
+      @assets = User.assets.where("city LIKE ?","%#{params[:selection][:city].capitalize}%")
     else
-      @assets = User.assets.all
+      @assets = User.assets
     end
     # @asset_coord = []
     # User.assets.each do |killer|
