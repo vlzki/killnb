@@ -16,7 +16,7 @@
         <%= f.input :picture, as: :attachinary %>
         <%= f.input :asset_status, as: :radio_buttons, label: 'Are you an asset?' %>
         <% if asset_status = true %>
-          <%= f.input :weapons, collection: User.weapons %>
+          <%= f.input :weapons, collection: @weapons %>
         <% end %>
       </div>
 
