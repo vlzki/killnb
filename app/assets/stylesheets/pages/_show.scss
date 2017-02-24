@@ -1,31 +1,249 @@
-body{
-  background-color: black;
-  background-image: linear-gradient(225deg, rgba(0,101,168,0.6) 0%, rgba(0,36,61,0.6) 50%), url("<%= image_path 'jockybg.jpg'%>");
+/*---------------------------------------------
+          Header
+-----------------------------------------------*/
+
+#global-header {
+  background: url("killnb.png") no-repeat;
+  background-size: cover;
+  padding-top: 150px;
+  padding-bottom: 107px;
+  position: relative;
+  background-attachment: fixed;
+}
+#global-header:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to left, #928dab, #1f1c2c 70%);
+  opacity: 0.8;
+}
+#global-header .block {
+  color: #E3E3E4;
+  margin: 0 auto;
+  padding-left: 90px;
+  text-align: center;
+}
+#global-header .block h1 {
+  font-weight: 100;
+  font-size: 45px;
+  letter-spacing: 6px;
+  padding-bottom: 15px;
+  margin-top: 0;
+  text-transform: capitalize;
+}
+#global-header .block p {
+  font-size: 16px;
+  font-weight: 300;
+  letter-spacing: 1px;
+  word-spacing: 3px;
 }
 
-.media {
-  display: flex;
+#slider-contact {
+  background: url("killnb.png") no-repeat;
+  background-size: cover;
+  padding-top: 150px;
+  padding-bottom: 107px;
+  position: relative;
 }
-.media-body {
-  flex: 1 1 auto;
-  padding: 20px;
+#slider-contact:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to left, #928dab, #1f1c2c 70%);
+  opacity: 0.8;
 }
-.media-body img {
+#slider-contact .block {
+  color: #E3E3E4;
+  margin: 0 auto;
+  padding-left: 90px;
+}
+#slider-contact .block h1 {
+  font-weight: 100;
+  font-size: 45px;
+  line-height: 60px;
+  letter-spacing: 6px;
+  padding-bottom: 15px;
+}
+#slider-contact .block p {
+  font-size: 23px;
+  line-height: 40px;
+  font-weight: 300;
+  letter-spacing: 1px;
+  word-spacing: 3px;
+}
+/*--
+  contact-form Start 
+--*/
+#contact-form {
+  padding-top: 70px;
+  padding-bottom: 35px;
+}
+#contact-form .block form .form-group {
+  padding-bottom: 15px;
+  margin: 0px;
+}
+#contact-form .block form .form-group .form-control {
+  background: #F6F8FA;
+  height: 60px;
+  border: 1px solid #EEF2F6;
+  box-shadow: none;
   width: 100%;
 }
-.media-aside {
-  flex: 0 0 400px;
-  padding: 30px;
-  align-self: stretch;
-  background: #F8F7F7;
-  border-left: 1px solid #f0efef;
+#contact-form .block form .form-group-2 {
+  padding-bottom: 15px;
+  margin: 0px;
 }
-.media-section {
-  margin: 40px auto;
+#contact-form .block form .form-group-2 textarea {
+  background: #F6F8FA;
+  height: 135px;
+  border: 1px solid #EEF2F6;
+  box-shadow: none;
+  width: 100%;
 }
-.media-section:first-child {
-  margin-top: 0;
+#contact-form .block button {
+  width: 100%;
+  height: 60px;
+  background: #47424C;
+  border: none;
+  color: #fff;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 18px;
 }
-.media-section:last-child {
-  margin-bottom: 0;
+/*--
+  wrapper-contact Start 
+--*/
+.address-block li {
+  margin-bottom: 20px;
+}
+.address-block li i {
+  margin-right: 15px;
+  font-size: 20px;
+  width: 20px;
+}
+.social-icons {
+  margin-top: 40px;
+}
+.social-icons li {
+  display: inline-block;
+  margin: 0 6px;
+}
+.social-icons a {
+  display: inline-block;
+}
+.social-icons i {
+  color: #2C2C2C;
+  margin-right: 25px;
+  font-size: 25px;
+}
+.google-map {
+  position: relative;
+}
+.google-map #map {
+  width: 100%;
+  height: 300px;
+  background-color: grey;
+}
+#contact-box {
+  padding-top: 35px;
+  padding-bottom: 58px;
+}
+#contact-box .block img {
+  width: 100%;
+}
+#contact-box .block h2 {
+  font-weight: 300;
+  color: #000;
+  font-size: 28px;
+  padding-bottom: 30px;
+}
+#contact-box .block p {
+  color: #5C5C5C;
+  display: block;
+}
+/*--
+  features-contact Start 
+--*/
+#features-contact {
+  padding-top: 50px;
+  padding-bottom: 75px;
+}
+#features-contact .block ul li {
+  width: 19%;
+  text-align: center;
+  display: inline-block;
+  padding: 40px 0px;
+}
+/*---------------------------------------------
+          Contact Close 
+-----------------------------------------------*/
+/*--------- Heading------------*/
+.heading {
+  padding-bottom: 60px;
+  text-align: center;
+}
+.heading h2 {
+  color: #000;
+  font-size: 30px;
+  line-height: 40px;
+  font-weight: 400;
+}
+.heading p {
+  font-size: 18px;
+  line-height: 40px;
+  color: #292929;
+  font-weight: 300;
+}
+
+/*---------------------------------------------
+          Call to action
+-----------------------------------------------*/
+
+#call-to-action {
+  background: url("killnb.png") no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  padding: 70px 0px;
+  position: relative;
+  text-align: center;
+  color: #fff;
+}
+#call-to-action:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  background: #1d192c;
+  opacity: 0.8;
+}
+#call-to-action h2 {
+  padding-bottom: 20px;
+  line-height: 33px;
+  margin: 0;
+  font-size: 30px;
+}
+#call-to-action p {
+  font-size: 14px;
+  line-height: 1.6;
+}
+#call-to-action .btn-call-to-action {
+  padding: 15px 35px;
+  border: none;
+  background-color: #fff;
+  font-size: 15px;
+  color: #333333;
+  margin-top: 30px;
 }
