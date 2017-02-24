@@ -6,7 +6,8 @@ class Customers::JobsController < ApplicationController
   end
 
   def show
-#    @job   = Job.find(params[:id])
+    @jobs = Job.where(user: current_user)
+    job_count = @jobs.size
   end
 
   def update

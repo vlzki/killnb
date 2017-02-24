@@ -15,45 +15,25 @@
         <section id="contact-form">
           <div class="container">
             <div class="row">
-              <div class="col-md-6 col-sm-12">
-                <div class="block">
-                  <form>
-                    <div class="form-group">
-                      <input type="text" class="form-control" placeholder="Your Name">
-                    </div>
-                    <div class="form-group">
-                      <input type="text" class="form-control" placeholder="Email Address">
-                    </div>
-                    <div class="form-group">
-                      <input type="text" class="form-control" placeholder="Subject">
-                    </div>
-                  </form>
-                </div>
-              </div>
-              <div class="col-md-6 col-sm-12">
-                <div class="block">
-                  <form>
-                    <div class="form-group-2">
-                      <textarea class="form-control" rows="3" placeholder="Your Message"></textarea>
-                    </div>
-                    <button class="btn btn-default" type="submit">Book me</button>
-                  </form>
-                </div>
-              </div>
-            </div>
             <div id="contact-box" class="row">
               <div class="col-md-6 col-sm-12">
                 <div class="block">
                   <h2>A little bit more about me</h2>
                   <ul class="address-block">
                     <li>
-                      <i class="fa fa-map-marker"></i>North Main Street,Brooklyn Australia
+                      <i class="Username"></i>Username : <%= @asset.username %>
+                    </li>
+                     <li>
+                      <i class="Description"></i>Description : <%= @asset.profile_description %>
                     </li>
                     <li>
-                      <i class="fa fa-envelope-o"></i>Email: contact@mail.com
+                      <i class="Weapons"></i>Weapons : <%= @asset.weapons %>
                     </li>
                     <li>
-                      <i class="fa fa-phone"></i>Phone:+88 01672 506 744
+                      <i class="City"></i>City : <%= @asset.city %>
+                    </li>
+                    <li>
+                      <i class="Kills"></i>Number of kills : <%= @asset.number_of_kills %>
                     </li>
                   </ul>
                   <ul class="social-icons">
@@ -75,6 +55,12 @@
                     </div>
                 </div>
               </div>
+              <div class="col-sm-12">
+                <div class="block">
+                   <%= render "jobs/form" %>
+                </div>
+              </div>
+            </div>
             </div>
           </div>
         </section>

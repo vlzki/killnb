@@ -1,0 +1,25 @@
+
+<% @jobs.each do |job| %> 
+
+<div class="product">
+  <div class='product-upvote'>
+    <div class="product-arrow"></div>
+    <div class='product-count'></div>
+  </div>
+  <img alt="kudoz" class="product-image hidden-xs"<%= image_tag "icon-dead.png" %>
+  <div class='product-body'>
+
+    <h5>Your target is : <%= job.target_name %></h5>
+    <h5>Please kill you target before : <%= job.deadline %> to get paid.</h5>
+    <h5>Your target address is : <%= job.address %></h5>
+    <h5>Please find a small description for the job : <%= job.description %></h5>
+
+  </div>
+  <ul class="list-inline product-controls hidden-sm hidden-xs">
+    <li><a href=""><i class="fa fa-check-circle-o"></i></a></li>
+    <li><a href=""><i class="fa fa-usd"></i></a></li>
+    <li><a href=""><i class="fa fa-star"></i></a></li>
+  </ul>
+</div>
+
+<% end %>

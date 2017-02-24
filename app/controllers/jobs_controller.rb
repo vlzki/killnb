@@ -10,9 +10,11 @@ class JobsController < ApplicationController
 	end
 
 	def create
+		raise
 		@job = Job.new(job_params)
 		@job.asset = @asset
     @job.user = current_user
+    raise
     if @job.save
 			redirect_to customers_job_path(@job)
 		else
