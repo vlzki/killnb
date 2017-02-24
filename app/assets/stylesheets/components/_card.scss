@@ -24,7 +24,8 @@
    -moz-perspective: 800px;
      -o-perspective: 800px;
         perspective: 800px;
-        margin: 0 auto 30px auto;
+        margin: 30px auto 30px auto;
+
 }
 /* flip the pane when hovered */
 .card-container:not(.manual-flip):hover .card,
@@ -159,7 +160,7 @@ box-shadow: 0px 0px 19px 0px rgba(0,0,0,0.16);
     border-top: 1px solid #EEEEEE;
     color: #999999;
     margin: 5px 0 0;
-    padding: 5px 0 0;
+    padding: 18px 0 0;
     text-align: center;
     color: grey;
 }

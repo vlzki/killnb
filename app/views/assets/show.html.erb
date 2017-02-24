@@ -1,55 +1,96 @@
 
-<div class="container">
-  <div class="row">
-    <div class="col-sm-12">
-      <h1>Assets#show</h1>
-      <p>Find me in app/views/assets/show.html.erb</p>
-
-
-
-      <div class="media">
-        <div class="media-body">
-          <div class="media-section">
-            <h2>asset.picture</h2>
-            ...
+      <!-- Slider Start -->
+        <section id="global-header">
+          <div class="container">
+            <div class="row">
+              <div class="col-md-12">
+                <div class="block">
+                  <h1>Book a job with me</h1>
+                  <p>Don’t just hesitate, go for it!. Check out some of my latest work.</p>
+                </div>
+              </div>
+            </div>
           </div>
-          <div class="media-section">
-            <h2>Profile</h2>
-            <ul>
-             <li>Description</li>
-             <li>XP</li>
-             <li>Number of Kills</li>
-             <li>Etc</li>
-           </ul>
-         </div>
-       </div>
-       <div class="media-aside">
-        <div class="media-section">
-          <%= render "jobs/form" %>
-          ...
-        </div>
-        <div class="media-section">
-          <h2>To be determined</h2>
-          ...
+        </section>
+        <!-- contact form start -->
+        <section id="contact-form">
+          <div class="container">
+            <div class="row">
+              <div class="col-md-6 col-sm-12">
+                <div class="block">
+                  <form>
+                    <div class="form-group">
+                      <input type="text" class="form-control" placeholder="Your Name">
+                    </div>
+                    <div class="form-group">
+                      <input type="text" class="form-control" placeholder="Email Address">
+                    </div>
+                    <div class="form-group">
+                      <input type="text" class="form-control" placeholder="Subject">
+                    </div>
+                  </form>
+                </div>
+              </div>
+              <div class="col-md-6 col-sm-12">
+                <div class="block">
+                  <form>
+                    <div class="form-group-2">
+                      <textarea class="form-control" rows="3" placeholder="Your Message"></textarea>
+                    </div>
+                    <button class="btn btn-default" type="submit">Book me</button>
+                  </form>
+                </div>
+              </div>
+            </div>
+            <div id="contact-box" class="row">
+              <div class="col-md-6 col-sm-12">
+                <div class="block">
+                  <h2>A little bit more about me</h2>
+                  <ul class="address-block">
+                    <li>
+                      <i class="fa fa-map-marker"></i>North Main Street,Brooklyn Australia
+                    </li>
+                    <li>
+                      <i class="fa fa-envelope-o"></i>Email: contact@mail.com
+                    </li>
+                    <li>
+                      <i class="fa fa-phone"></i>Phone:+88 01672 506 744
+                    </li>
+                  </ul>
 
-          <%= link_to 'Back', assets_path %>
-
-
-
-        </div>
-
-      </div>
-    </div>
-  </div>
-
-
-
-  <div class="wrapper">
-    <h4 class="text-left">Asset Job Review</h4>
-    <% @asset_jobs.each do |job| %>
-    <%= job.review %>
-    <% end %>
-  </div>
-
-  <div <map> Insert Map</map>
-
+                  <ul class="social-icons">
+                    <li><i class="fa fa-google"></i></li>
+                    <li><i class="fa fa-linkedin"></i></li>
+                    <li><i class="fa fa-pinterest"></i></li>
+                    <li><i class="fa fa-dribbble"></i></li>
+                    <li><i class="fa fa-behance"></i></li>
+                    <li><i class="fa fa-twitter"></i></li>
+                    <li><i class="fa fa-facebook"></i></li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-md-6 col-sm-12">
+                <div class="block">
+                  <h2>Find me on Google Map</h2>
+                    <div class="google-map">
+                      <div id="map"></div>
+                    </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- Call to action Start -->
+        <section id="call-to-action">
+          <div class="container">
+            <div class="row">
+              <div class="col-md-12">
+                <div class="block">
+                  <h2>We simply kill people.</h2>
+                  <p>Read more about what we do and our philosophy of getting the job done. Judge for yourself! The work and results we’ve achieved for our clients, and meet our highly experienced Team who just love to kill.</p>
+                  <a class="btn btn-default btn-call-to-action" href="#" >Send us a review</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
